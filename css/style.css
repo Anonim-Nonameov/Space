@@ -29,11 +29,12 @@
 	font-style: normal;
 	font-weight: normal;
 	font-display: swap;
-}
+} 
 
 a {
 	color: inherit;
 	text-decoration: none;
+	transition: color .5s;
 }
 
 button {
@@ -45,7 +46,7 @@ button {
 	transition: color .5s, border-color .5s;
 }
 
-button:hover {
+a:hover, button:hover {
 	border-color: #CB0E0E;
 	color: #CB0E0E;
 }
@@ -694,9 +695,35 @@ foreignObject {
 	}
 }
 
+@media (max-width: 1050px) {
+	.special-offer__inner {
+		display: block;
+	}
+
+	.special-offer__item {
+		width: 100%;
+	}
+
+	.special-offer__btn {
+		margin-bottom: 20px;
+	}
+}
+
 @media (max-width: 1024px) {
 	.login {
 		margin-right: 0;
+	}
+
+	.to-book__inner {
+		display: block;
+	}
+
+	.to-book__text {
+		width: 100%;
+		margin-top: 0;
+		margin-bottom: 30px;
+		margin-right: 0;
+		margin-left: 0;
 	}
 }
 
@@ -800,9 +827,48 @@ foreignObject {
 		height: 22px;
 		background-color: #036CCA;
 	}
+
+	.services__inner {
+		display: block;
+	}
+
+	.services__box-list {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 170px;
+	}
+
+	.services__buttons {
+		max-width: 500px;
+		width: auto;
+		margin: 0 auto;
+	}
+
+	.slick-slide img {
+		max-width: 100%;
+	}
 }
 
-@media (max-width: 620px) {
+@media (max-width: 720px) {
+	.services {
+		padding-bottom: 50px
+	}
+
+	.slider__inner {
+		padding: 0;
+	}
+
+	.slider__description {
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	.info {
+		padding-bottom: 50px;
+	}
+}
+
+@media (max-width: 640px) {
 	.header__title {
 		font-size: 34px;
 		line-height: 30px;
@@ -883,12 +949,50 @@ foreignObject {
 		font-weight: 400;
 		line-height: 22px;
 	}
+
+	.to-book {
+		background-position: top left;
+	}
 }
 
 @media (max-width: 480px) {
 	.title {
 		font-size: 28px;
 		line-height: 28px;
+	}
+
+	.special-offer__new-price {
+		font-size: 34px;
+		line-height: 44px;
+	}
+
+	.services__box-list {
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	.special-offer__item-box {
+		padding: 20px 10px;
+	}
+
+	.services__title,
+	.to-book__title {
+		font-size: 23px;
+	}
+
+	.slider__arrow {
+		/* У slider__arrow стили внутри тега,
+		пришлось переопределять так. */
+		display: none !important;
+	}
+}
+
+
+@media (max-width: 375px) {
+	.services__btn--first::before {
+		/* Специально для:
+		.services__btn--first::before */
+		bottom: 62px;
 	}
 }
 
